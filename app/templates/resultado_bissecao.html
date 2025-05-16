@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Resultado Bisseção{% endblock %}
+{% block content %}
+<h2>Resultado - Método da Bisseção</h2>
+<p>Função: {{ funcao }}</p>
+<p>Raiz aproximada: {{ raiz }}</p>
+
+<img src="{{ url_for('static', filename=imagem) }}" alt="Gráfico da função">
+
+<h3>Iterações:</h3>
+<table>
+    <tr>
+        <th>Iteração</th>
+        <th>a</th>
+        <th>b</th>
+        <th>c</th>
+        <th>f(c)</th>
+    </tr>
+    {% for i, a, b, c, fc in iteracoes %}
+    <tr>
+        <td>{{ i }}</td>
+        <td>{{ a }}</td>
+        <td>{{ b }}</td>
+        <td>{{ c }}</td>
+        <td>{{ fc }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a class="button-link" href="{{ url_for('bissecao') }}">Nova tentativa</a><br>
+<a class="button-link" href="{{ url_for('home') }}">Voltar para o início</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Newton-Raphson{% endblock %}
+{% block content %}
+<h2>Calculadora - Método de Newton-Raphson</h2>
+<form method="POST">
+    <input type="text" name="funcao" placeholder="Função (ex: x**3 - x - 2)" required>
+    <input type="number" step="any" name="x0" placeholder="Chute inicial x0" required>
+    <input type="number" step="any" name="tolerancia" value="0.0001" placeholder="Tolerância" required>
+    <input type="number" name="max_iteracoes" value="50" placeholder="Máx. Iterações" required>
+    <button type="submit">Calcular</button>
+</form>
+<a class="button-link" href="{{ url_for('home') }}">Voltar para o início</a>
+{% endblock %}
