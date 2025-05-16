@@ -13,7 +13,7 @@ Aplicação web educacional desenvolvida com Python e Flask para o cálculo de r
 - 📌 Método de Newton-Raphson
 - 📈 Geração automática de gráfico com a raiz aproximada
 - 📋 Tabela de iterações
-- 💻 Interface responsiva com tema IFPA
+- 💻 Interface responsiva
 
 ---
 
